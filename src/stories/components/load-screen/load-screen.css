@@ -1,0 +1,21 @@
+.load-title-text{
+    font-family: 'Raleway-Bold';
+    font-size:20px;
+    text-align:center;
+    margin-top: 50px;
+}
+
+.load-link{
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 10px;
+    text-decoration: underline;
+    margin-top: 10px;
+    text-align:center;
+}
+
+.load-text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import './helloworld.css';
-import {Modal} from './components/Modal'
+import './metrc-link.css';
+import {Modal} from '../modal/Modal'
 
 const { useState } = React
-export interface HelloWorldProps {
+
+export interface MetrcLinkProps {
     /**
      * What background color to use
      */
@@ -18,13 +19,9 @@ export interface HelloWorldProps {
      * Button contents
      */
     label: string;
-    /**
-     * Optional click handler
-     */
-    onLinkClick?: () => void;
 }
 
-export const HelloWorld: React.FC<HelloWorldProps>= ({
+export const MetrcLink: React.FC<MetrcLinkProps>= ({
     size,
     backgroundColor,
     label,
@@ -33,7 +30,7 @@ export const HelloWorld: React.FC<HelloWorldProps>= ({
   }) => {
     const [open, setOpen]=useState(false)
 
-    const OpenOnClick = () => {
+    const openOnClick = () => {
         setOpen(!open)
     }
 
@@ -46,9 +43,9 @@ export const HelloWorld: React.FC<HelloWorldProps>= ({
             <Modal open={open} closeModal={closeModal}/>
             <button
             type="button"
-            className={['storybook-button', `storybook-button--${size}`].join(' ')}
+            className={['metrc-button', `metrc-button--${size}`].join(' ')}
             style={{backgroundColor, color}}
-            onClick={()=>OpenOnClick()}
+            onClick={()=>openOnClick()}
             {...props}
             >
             {label}
@@ -56,4 +53,3 @@ export const HelloWorld: React.FC<HelloWorldProps>= ({
         </div>
     )
 }
-

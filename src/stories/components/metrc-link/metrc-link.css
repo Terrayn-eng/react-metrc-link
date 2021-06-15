@@ -1,12 +1,24 @@
+@font-face {
+    font-family: Raleway;
+    src: local('Raleway'), url(../../assets/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: Raleway-Bold;
+  src: local('Raleway-Bold'), url(../../assets/Raleway/static/Raleway-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: Raleway-Medium;
+  src: local('Raleway-Medium'), url(../../assets/Raleway/static/Raleway-Medium.ttf) format('truetype');
+}
 .metrc-button {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
     border: 0;
     border-radius: 3em;
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
   }
   .metrc-button--primary {
     color: white;

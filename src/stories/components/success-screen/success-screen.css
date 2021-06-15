@@ -1,0 +1,40 @@
+.success-title-text{
+    font-family: 'Raleway-Bold';
+    font-size: 20px;
+    text-align: center;
+}
+
+.sub-text{
+    font-size: 11px;
+    text-align: center;
+    padding: 5px 25px 0px 25px;
+}
+
+.success-button {
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    color: white;
+    background-color: #68c86b;
+    font-size: 12px;
+    padding: 10px 70px;
+    margin-top: 20px;
+}
+
+.success-button-div{
+    display: flex;
+    justify-content: center;
+}
+.successWoman{
+    width:80%;
+}
+.successWomanDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}

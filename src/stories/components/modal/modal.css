@@ -9,6 +9,7 @@
 }
   
 .modal-main {
+    font-family: 'Raleway';
     position:fixed;
     background: white;
     width: 310px;
@@ -17,7 +18,7 @@
     left:50%;
     transform: translate(-50%,-50%);
     border-radius: 10px;
-    padding: 30px 47px;
+    padding: 30px 30px;
 }
   
 .display-block {
@@ -29,5 +30,21 @@
 }
 
 .closeIcon{
-    width:20px;
+    width:12px;
+}
+
+.closeIconDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.safetyWoman{
+    width:75%;
+}
+
+.safetyWomanDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
