@@ -9,17 +9,19 @@ import './modal.css';
 const { useState } = React
 
 export interface ModalProps {
+    /**
+     * Boolean to set modal as open or closed
+     */
     open: boolean;
     /**
-     * Optional click handler
+     * Callback to close modal
      */
-    closeModal?: () => void;
+    closeModal: () => void;
 }
 
 export const Modal: React.FC<ModalProps>= ({
     open,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     const showHideClassName = open ? "modal display-block" : "modal display-none";
     const [screen, setScreen]=useState("privacy")

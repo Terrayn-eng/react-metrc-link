@@ -10,6 +10,8 @@
   font-family: Raleway-Medium;
   src: local('Raleway-Medium'), url(../../assets/Raleway/static/Raleway-Medium.ttf) format('truetype');
 }
+
+/* Button default styles */
 .metrc-button {
     font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -19,31 +21,8 @@
     display: inline-block;
     line-height: 1;
     letter-spacing: 0.2px;
-  }
-  .metrc-button--primary {
-    color: white;
-    background-color: #1ea7fd;
-  }
-  .metrc-button--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  }
-  .metrc-button--small {
-    font-size: 12px;
-    padding: 10px 16px;
-  }
-  .metrc-button--medium {
-    font-size: 14px;
-    padding: 11px 20px;
-  }
-  .metrc-button--large {
     font-size: 16px;
     padding: 12px 74px;
-  }
-  .hide{
-      display:none;
-  }
-  .show{
-      display: block;
+    background-color: #68c86b;
+    color: #fff;
   }

@@ -2,7 +2,6 @@
     font-family: 'Raleway-Bold';
     font-size:20px;
     text-align:center;
-    margin-top: 50px;
 }
 
 .load-link{
@@ -18,4 +17,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.thinkingWoman{
+    width:300px;
 }

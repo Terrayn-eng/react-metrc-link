@@ -2,20 +2,20 @@ import React from 'react';
 import './success-screen.css';
 import {closeIcon, successWoman} from '../../assets'
 
-const { useState } = React
-
 export interface SuccessScreenProps {
-    /**
-     * Optional click handler
+   /**
+     * Callback to set next screen
      */
-    handleSetScreen?: () => void;
-    closeModal?: () => void;
+    handleSetScreen: () => void;
+    /**
+     * Callback to close modal
+     */
+    closeModal: () => void;
 }
 
 export const SuccessScreen: React.FC<SuccessScreenProps>= ({
     handleSetScreen,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     return (
         <div>

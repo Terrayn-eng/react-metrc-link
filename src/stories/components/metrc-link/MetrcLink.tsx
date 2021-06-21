@@ -6,27 +6,68 @@ const { useState } = React
 
 export interface MetrcLinkProps {
     /**
-     * What background color to use
+     * What button background color to use
      */
     backgroundColor?: string;
-
-    color:string;
     /**
-     * How large should the button be?
+     * What button font color to use
      */
-    size?: 'small' | 'medium' | 'large';
+    color?:string;
     /**
      * Button contents
      */
-    label: string;
+    label?: string;
+    /**
+     * What button font family to use
+     */
+    fontFamily?:string;
+    /**
+     * What button font weight to use
+     */
+    fontWeight?:number;
+    /**
+     * What button border to use
+     */
+    border?:string;
+    /**
+     * What button radius to use
+     */
+    borderRadius?:string;
+    /**
+     * What button line height to use
+     */
+    lineHeight?: number;
+    /**
+     * What button line spacing to use
+     */
+    letterSpacing?: string;
+    /**
+     * What button font size to use
+     */
+    fontSize?: string;
+    /**
+     * What button padding to use
+     */
+    padding?: string;
+    /**
+     * What button margin to use
+     */
+    margin?: string;
 }
 
 export const MetrcLink: React.FC<MetrcLinkProps>= ({
-    size,
     backgroundColor,
     label,
     color,
-    ...props
+    border,
+    borderRadius,
+    lineHeight,
+    letterSpacing,
+    fontFamily,
+    fontWeight,
+    fontSize,
+    padding,
+    margin
   }) => {
     const [open, setOpen]=useState(false)
 
@@ -39,17 +80,16 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
     }
 
     return (
-        <div>
+        <>
             <Modal open={open} closeModal={closeModal}/>
             <button
             type="button"
-            className={['metrc-button', `metrc-button--${size}`].join(' ')}
-            style={{backgroundColor, color}}
+            className='metrc-button'
+            style={{backgroundColor, color, border, borderRadius, lineHeight, letterSpacing, fontFamily, fontWeight, fontSize, padding, margin}}
             onClick={()=>openOnClick()}
-            {...props}
             >
             {label}
             </button>
-        </div>
+        </>
     )
 }

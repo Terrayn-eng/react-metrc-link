@@ -2,20 +2,20 @@ import React from 'react';
 import './error-screen.css';
 import {closeIcon, errorMan} from '../../assets'
 
-const { useState } = React
-
 export interface ErrorScreenProps {
-    /**
-     * Optional click handler
+     /**
+     * Callback to set next screen
      */
-    handleSetScreen?: () => void;
-    closeModal?: () => void;
+    handleSetScreen: () => void;
+    /**
+     * Callback to close modal
+     */
+    closeModal: () => void;
 }
 
 export const ErrorScreen: React.FC<ErrorScreenProps>= ({
     handleSetScreen,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     return (
         <div>

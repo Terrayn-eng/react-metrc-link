@@ -2,20 +2,20 @@ import React from 'react';
 import './credentials-screen.css';
 import {closeIcon, metrcLogo} from '../../assets'
 
-const { useState } = React
-
 export interface CredentialsScreenProps {
     /**
-     * Optional click handler
+     * Callback to set next screen
      */
-    handleSetScreen?: () => void;
-    closeModal?: () => void;
+    handleSetScreen: () => void;
+    /**
+     * Callback to close modal
+     */
+    closeModal: () => void;
 }
 
 export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
     handleSetScreen,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     return (
         <div>

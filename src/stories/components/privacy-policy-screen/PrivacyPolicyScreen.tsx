@@ -2,20 +2,20 @@ import React from 'react';
 import './privacy-policy-screen.css';
 import {closeIcon, safetyWoman} from '../../assets'
 
-const { useState } = React
-
 export interface PrivacyPolicyScreenProps {
     /**
-     * Optional click handler
+     * Callback to set next screen
      */
-    handleSetScreen?: () => void;
-    closeModal?: () => void;
+    handleSetScreen: () => void;
+    /**
+     * Callback to close modal
+     */
+    closeModal: () => void;
 }
 
 export const PrivacyPolicyScreen: React.FC<PrivacyPolicyScreenProps>= ({
     handleSetScreen,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     return (
         <div>

@@ -1,29 +1,29 @@
 import React from 'react';
 import './load-screen.css';
-import {closeIcon, safetyWoman} from '../../assets'
-
-const { useState } = React
+import {closeIcon, thinkingWoman} from '../../assets'
 
 export interface LoadScreenProps {
-    /**
-     * Optional click handler
+     /**
+     * Callback to set next screen
      */
-    handleSetScreen?: () => void;
-    closeModal?: () => void;
+    handleSetScreen: () => void;
+    /**
+     * Callback to close modal
+     */
+    closeModal: () => void;
 }
 
 export const LoadScreen: React.FC<LoadScreenProps>= ({
     handleSetScreen,
-    closeModal,
-    ...props
+    closeModal
   }) => {
     return (
         <div>
             <div className="closeIconDiv">
                 <img className="closeIcon" src={closeIcon} onClick={closeModal}/>
             </div>
-            <div className="safetyWomanDiv">
-                <img className="safetyWoman" src={safetyWoman}/>
+            <div className="thinkingWomanDiv">
+                <img className="thinkingWoman" src={thinkingWoman}/>
             </div>
             <div className="load-text-div">
                 <h1 className="load-title-text">Verifying your Metrc credentials...</h1>
