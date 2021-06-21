@@ -26,3 +26,8 @@
     background-color: #68c86b;
     color: #fff;
   }
+
+  .metrc-button:focus {
+    outline: none;
+    box-shadow: none;
+  }
