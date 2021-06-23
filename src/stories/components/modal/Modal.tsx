@@ -17,11 +17,16 @@ export interface ModalProps {
      * Callback to close modal
      */
     closeModal: () => void;
+    /**
+     * States your company has vendor keys for
+     */
+    states: Array<string>;
 }
 
 export const Modal: React.FC<ModalProps>= ({
     open,
-    closeModal
+    closeModal,
+    states
   }) => {
     const showHideClassName = open ? "modal display-block" : "modal display-none";
     const [screen, setScreen]=useState("privacy")
@@ -33,7 +38,7 @@ export const Modal: React.FC<ModalProps>= ({
         <div className={showHideClassName}>
             <div className="modal-main">
                 {screen === "privacy" ? <PrivacyPolicyScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
-                {screen === "credentials" ? <CredentialsScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
+                {screen === "credentials" ? <CredentialsScreen closeModal={closeModal} handleSetScreen={handleSetScreen} states={states}/>:null}
                 {screen === "load" ? <LoadScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
                 {screen ==="success" ? <SuccessScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
                 {screen === "error" ? <ErrorScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}

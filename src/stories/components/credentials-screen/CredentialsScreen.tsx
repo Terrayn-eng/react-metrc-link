@@ -11,11 +11,16 @@ export interface CredentialsScreenProps {
      * Callback to close modal
      */
     closeModal: () => void;
+    /**
+     * States your company has vendor keys for
+     */
+    states: Array<string>;
 }
 
 export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
     handleSetScreen,
-    closeModal
+    closeModal,
+    states
   }) => {
     return (
         <div>
@@ -29,9 +34,7 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
             <p className="user-key-label">User Key</p>
             <input className="user-key-input" placeholder="User Key"/>
             <select className="state-select" name="state" id="state">
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="OR">OR</option>
+                {states && states.length ? states.map((state, index)=><option key={index} value={state}>{state}</option>):null}
             </select>
             <div className="credentials-buttons-div">
                 <button className="credentials-button" onClick={()=>handleSetScreen("load")}>Submit</button>

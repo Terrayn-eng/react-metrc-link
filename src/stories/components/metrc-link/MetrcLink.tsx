@@ -6,6 +6,10 @@ const { useState } = React
 
 export interface MetrcLinkProps {
     /**
+     * States your company has vendor keys for
+     */
+    states: Array<string>;
+    /**
      * What button background color to use
      */
     backgroundColor?: string;
@@ -56,6 +60,7 @@ export interface MetrcLinkProps {
 }
 
 export const MetrcLink: React.FC<MetrcLinkProps>= ({
+    states,
     backgroundColor,
     label,
     color,
@@ -81,7 +86,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
 
     return (
         <>
-            <Modal open={open} closeModal={closeModal}/>
+            <Modal open={open} closeModal={closeModal} states={states}/>
             <button
             type="button"
             className='metrc-button'

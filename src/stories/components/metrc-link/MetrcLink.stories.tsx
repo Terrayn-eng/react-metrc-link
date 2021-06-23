@@ -12,6 +12,7 @@ const Template: Story<MetrcLinkProps> = (args) => <MetrcLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+  states:['CO','OR','CA','AK'],
   label: 'Link with Metrc',
   backgroundColor: '#68c86b',
   color: '#fff',
@@ -28,6 +29,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  states:['CO','OR'],
   label: 'Link with Metrc',
   backgroundColor: 'blue',
   color: '#fff',
