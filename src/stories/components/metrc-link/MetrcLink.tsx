@@ -6,9 +6,17 @@ const { useState } = React
 
 export interface MetrcLinkProps {
     /**
+     * Callback to send data back to app on success
+     */
+    callback: () => void;
+    /**
      * States your company has vendor keys for
      */
     states: Array<string>;
+    /**
+     * Backend Url
+     */
+    backendUrl: string;
     /**
      * What button background color to use
      */
@@ -60,7 +68,9 @@ export interface MetrcLinkProps {
 }
 
 export const MetrcLink: React.FC<MetrcLinkProps>= ({
+    callback,
     states,
+    backendUrl,
     backgroundColor,
     label,
     color,
@@ -75,6 +85,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
     margin
   }) => {
     const [open, setOpen]=useState(false)
+    const [screen, setScreen]=useState("privacy")
 
     const openOnClick = () => {
         setOpen(!open)
@@ -82,11 +93,16 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
 
     const closeModal =() =>{
         setOpen(false)
+        handleSetScreen('privacy')
+    }
+
+    const handleSetScreen = (screenName) =>{
+        setScreen(screenName)
     }
 
     return (
         <>
-            <Modal open={open} closeModal={closeModal} states={states}/>
+            <Modal open={open} closeModal={closeModal} states={states} screen={screen} handleSetScreen={handleSetScreen} callback={callback} backendUrl={backendUrl}/>
             <button
             type="button"
             className='metrc-button'

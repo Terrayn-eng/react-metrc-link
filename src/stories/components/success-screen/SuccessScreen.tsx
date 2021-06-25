@@ -29,7 +29,7 @@ export const SuccessScreen: React.FC<SuccessScreenProps>= ({
             <h1 className="success-title-text">Nice! Metrc has successfully been connected</h1>
             <p className="sub-text">You will now be able to see data from Metrc in your Terrayn dashboard. Way to go!</p>
             <div className="success-button-div">
-                <button className="success-button" onClick={()=>handleSetScreen("error")}>Back to Terrayn</button>
+                <button className="success-button" onClick={closeModal}>Back to Terrayn</button>
             </div>
         </div>
     )

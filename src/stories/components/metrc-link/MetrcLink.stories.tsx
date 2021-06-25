@@ -10,9 +10,15 @@ export default {
 
 const Template: Story<MetrcLinkProps> = (args) => <MetrcLink {...args} />;
 
+const handleCallback = (resp) =>{
+  console.log(resp.state, resp.user_key)
+}
+
 export const Primary = Template.bind({});
 Primary.args = {
+  callback: handleCallback,
   states:['CO','OR','CA','AK'],
+  backendUrl:'http://127.0.0.1:5000/user_key',
   label: 'Link with Metrc',
   backgroundColor: '#68c86b',
   color: '#fff',
@@ -24,12 +30,14 @@ Primary.args = {
   letterSpacing:'0.2px',
   fontSize: '16px',
   padding: '12px 74px',
-  margin: '0px'
+  margin: '0px',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  callback: handleCallback,
   states:['CO','OR'],
+  backendUrl:'http://127.0.0.1:5000/user_key',
   label: 'Link with Metrc',
   backgroundColor: 'blue',
   color: '#fff',
