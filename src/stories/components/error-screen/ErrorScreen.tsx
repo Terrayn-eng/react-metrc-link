@@ -1,12 +1,13 @@
 import React from 'react';
 import './error-screen.css';
-import {closeIcon, errorMan} from '../../assets'
+import closeIcon from '../../assets/close-icon.svg';
+import errorMan from '../../assets/error-man.svg';
 
 export interface ErrorScreenProps {
      /**
      * Callback to set next screen
      */
-    handleSetScreen: () => void;
+    handleSetScreen: (screenName: string) => void;
     /**
      * Callback to close modal
      */

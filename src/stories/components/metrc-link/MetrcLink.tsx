@@ -4,11 +4,22 @@ import {Modal} from '../modal/Modal'
 
 const { useState } = React
 
+export interface Response {
+    /**
+     * State passed into form
+     */
+    state:string;
+    /**
+     * User key passed into form
+     */
+    user_key?:string;
+}
+
 export interface MetrcLinkProps {
     /**
      * Callback to send data back to app on success
      */
-    callback: () => void;
+    callback: (resp:Response) => void;
     /**
      * States your company has vendor keys for
      */
@@ -96,7 +107,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
         handleSetScreen('privacy')
     }
 
-    const handleSetScreen = (screenName) =>{
+    const handleSetScreen = (screenName:string) =>{
         setScreen(screenName)
     }
 
@@ -109,7 +120,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
             style={{backgroundColor, color, border, borderRadius, lineHeight, letterSpacing, fontFamily, fontWeight, fontSize, padding, margin}}
             onClick={()=>openOnClick()}
             >
-            {label}
+            {label ? label : 'Link with Metrc'}
             </button>
         </>
     )

@@ -26,6 +26,11 @@
     margin-top: 20px;
 }
 
+.error-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .error-button-div{
     display: flex;
     justify-content: center;

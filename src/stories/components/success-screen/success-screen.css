@@ -26,6 +26,11 @@
     margin-top: 20px;
 }
 
+.success-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .success-button-div{
     display: flex;
     justify-content: center;

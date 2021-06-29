@@ -38,6 +38,11 @@
     margin-top: 5px;
 }
 
+.privacy-policy-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .privacy-policy-div{
     display: flex;
     justify-content: center;

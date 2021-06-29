@@ -1,12 +1,9 @@
 import React from 'react';
 import './success-screen.css';
-import {closeIcon, successWoman} from '../../assets'
+import closeIcon from '../../assets/close-icon.svg';
+import successWoman from '../../assets/success-woman.svg';
 
 export interface SuccessScreenProps {
-   /**
-     * Callback to set next screen
-     */
-    handleSetScreen: () => void;
     /**
      * Callback to close modal
      */
@@ -14,7 +11,6 @@ export interface SuccessScreenProps {
 }
 
 export const SuccessScreen: React.FC<SuccessScreenProps>= ({
-    handleSetScreen,
     closeModal
   }) => {
     return (

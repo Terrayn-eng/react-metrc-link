@@ -1,12 +1,13 @@
 import React from 'react';
 import './load-screen.css';
-import {closeIcon, thinkingWoman} from '../../assets'
+import closeIcon from '../../assets/close-icon.svg';
+import thinkingWoman from '../../assets/thinking-woman.gif';
 
 export interface LoadScreenProps {
      /**
      * Callback to set next screen
      */
-    handleSetScreen: () => void;
+    handleSetScreen: (screenName: string) => void;
     /**
      * Callback to close modal
      */

@@ -8,9 +8,20 @@ export default {
   component: MetrcLink,
 } as Meta;
 
+export interface Response {
+  /**
+   * State passed into form
+   */
+  state:string;
+  /**
+   * User key passed into form
+   */
+  user_key?:string;
+}
+
 const Template: Story<MetrcLinkProps> = (args) => <MetrcLink {...args} />;
 
-const handleCallback = (resp) =>{
+const handleCallback = (resp:Response) =>{
   console.log(resp.state, resp.user_key)
 }
 

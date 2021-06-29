@@ -1,14 +1,26 @@
 import React from 'react';
 import './credentials-screen.css';
-import {closeIcon, metrcLogo} from '../../assets'
+import closeIcon from '../../assets/close-icon.svg';
+import metrcLogo from '../../assets/metrc-logo.png';
 
 const { useState } = React
+
+export interface Response {
+    /**
+     * State passed into form
+     */
+    state:string;
+    /**
+     * User key passed into form
+     */
+    user_key?:string;
+}
 
 export interface CredentialsScreenProps {
     /**
      * Callback to send data back to app on success
      */
-    callback: () => void;
+    callback: (resp:Response) => void;
     /**
      * Backend Url
      */
@@ -16,7 +28,7 @@ export interface CredentialsScreenProps {
     /**
      * Callback to set next screen
      */
-    handleSetScreen: () => void;
+    handleSetScreen: (screenName: string) => void;
     /**
      * Callback to close modal
      */
@@ -35,25 +47,32 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
     states
   }) => {
     const [state, setState] = useState(states[0])
-    const [userKey, setUserKey] = useState()
+    const [userKey, setUserKey] = useState('')
+    const [error, setError] = useState(false)
 
     const handleSubmit = async() =>{
-        handleSetScreen("load")
-        const data = {'state':state, 'user_key':userKey}
-        const formBody = Object.entries(data).map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value)).join('&')
-        const response = await fetch(backendUrl,{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-            },
-            body: formBody 
-        })
-        if(response.status === 200){
-            callback(data)
-            handleSetScreen("success")
+        if(userKey.length){
+            setError(false) 
+            handleSetScreen("load")
+            const data:Response = {'state':state, 'user_key':userKey}
+            const formBody = Object.entries(data).map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value)).join('&')
+            const response = await fetch(backendUrl,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: formBody 
+            })
+            if(response.status === 200){
+                callback(data)
+                handleSetScreen("success")
+            }else{
+                handleSetScreen("error")
+            }
         }else{
-            handleSetScreen("error")
+            setError(true) 
         }
+       
     } 
     return (
         <div>
@@ -69,6 +88,7 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
             <select className="state-select" name="state" id="state" onChange={(e)=>setState(e.target.value)}>
                 {states && states.length ? states.map((state, index)=><option key={index} value={state}>{state}</option>):null}
             </select>
+            {error ? <p className="errorMessage">Please enter a User Key.</p> : null}
             <div className="credentials-buttons-div">
                 <button className="credentials-button" onClick={handleSubmit}>Submit</button>
                 <a className="credentials-link" onClick={()=>handleSetScreen("privacy")}>Back</a>

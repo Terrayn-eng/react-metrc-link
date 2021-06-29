@@ -1,12 +1,13 @@
 import React from 'react';
 import './privacy-policy-screen.css';
-import {closeIcon, safetyWoman} from '../../assets'
+import closeIcon from '../../assets/close-icon.svg';
+import safetyWoman from '../../assets/safety-woman.svg';
 
 export interface PrivacyPolicyScreenProps {
     /**
      * Callback to set next screen
      */
-    handleSetScreen: () => void;
+    handleSetScreen: (screenName: string) => void;
     /**
      * Callback to close modal
      */
