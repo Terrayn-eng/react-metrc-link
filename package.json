@@ -10,6 +10,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "react": "^17.0.2",
     "rollup-plugin-visualizer": "^5.5.0"
   },
   "peerDependencies": {
