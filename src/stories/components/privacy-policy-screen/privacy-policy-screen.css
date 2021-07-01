@@ -1,5 +1,5 @@
 .title-text{
-    font-family: 'Raleway-Medium';
+    font-family: Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
     padding: 0px 25px;
@@ -23,7 +23,7 @@
 }
 
 .privacy-policy-button {
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 400;
     border: 0;
     border-radius: 3em;

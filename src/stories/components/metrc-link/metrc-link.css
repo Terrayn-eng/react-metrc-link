@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Raleway;
     src: local('Raleway'), url(../../assets/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
 }
@@ -9,11 +9,11 @@
 @font-face {
   font-family: Raleway-Medium;
   src: local('Raleway-Medium'), url(../../assets/Raleway/static/Raleway-Medium.ttf) format('truetype');
-}
+} */
 
 /* Button default styles */
 .metrc-button {
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 400;
     border: 0;
     border-radius: 3em;

@@ -9,7 +9,7 @@
 }
   
 .modal-main {
-    font-family: 'Raleway';
+    font-family: Helvetica, sans-serif;
     position:fixed;
     background: white;
     width: 310px;

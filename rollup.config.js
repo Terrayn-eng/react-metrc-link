@@ -31,4 +31,4 @@ export default {
       visualizer()
     ],
     external: ['react', 'react-dom']
-  }
+}
