@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.sub-text{
+.metrc-sub-text{
     font-size: 11px;
     text-align: center;
     padding: 5px 25px 0px 25px;
@@ -23,7 +23,7 @@
     background-color: #68c86b;
     font-size: 12px;
     padding: 10px 70px;
-    margin-top: 20px;
+    margin: 15px 0px 5px 0px;
 }
 
 .error-button:focus {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './credentials-screen.css';
-import closeIcon from '../../assets/close-icon.svg';
+import metrcCloseIcon from '../../assets/close-icon.svg';
 import metrcLogo from '../../assets/metrc-logo.png';
 
 const { useState } = React
@@ -76,8 +76,8 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
     } 
     return (
         <div>
-            <div className="closeIconDiv">
-                <img className="closeIcon" src={closeIcon} onClick={closeModal}/>
+            <div className="metrcCloseIconDiv">
+                <img className="metrcCloseIcon" src={metrcCloseIcon} onClick={closeModal}/>
             </div>
             <h1 className="metrc-title-text">Enter you Metrc User Key and State below:</h1>
             <div className="metrcLogoDiv">

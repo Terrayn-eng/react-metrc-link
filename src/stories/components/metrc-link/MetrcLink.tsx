@@ -76,6 +76,14 @@ export interface MetrcLinkProps {
      * What button margin to use
      */
     margin?: string;
+    /**
+     * Company name to use on privacy screen
+     */
+    companyName: string;
+    /**
+     * Company name to use on privacy screen
+     */
+    privacyPolicyLink:string;
 }
 
 export const MetrcLink: React.FC<MetrcLinkProps>= ({
@@ -93,7 +101,9 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
     fontWeight,
     fontSize,
     padding,
-    margin
+    margin,
+    companyName,
+    privacyPolicyLink
   }) => {
     const [open, setOpen]=useState(false)
     const [screen, setScreen]=useState("privacy")
@@ -113,7 +123,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
 
     return (
         <>
-            <Modal open={open} closeModal={closeModal} states={states} screen={screen} handleSetScreen={handleSetScreen} callback={callback} backendUrl={backendUrl}/>
+            <Modal open={open} closeModal={closeModal} states={states} screen={screen} handleSetScreen={handleSetScreen} callback={callback} backendUrl={backendUrl} companyName={companyName} privacyPolicyLink={privacyPolicyLink}/>
             <button
             type="button"
             className='metrc-button'

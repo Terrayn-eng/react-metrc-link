@@ -1,4 +1,4 @@
-export const closeIcon =  require('./close-icon.svg')
+export const metrcCloseIcon =  require('./close-icon.svg')
 export const safetyWoman =  require('./safety-woman.svg')
 export const metrcLogo = require('./metrc-logo.png')
 export const successWoman = require('./success-woman.svg')

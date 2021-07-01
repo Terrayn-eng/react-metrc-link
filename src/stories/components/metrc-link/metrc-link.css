@@ -1,20 +1,7 @@
-/* @font-face {
-    font-family: Raleway;
-    src: local('Raleway'), url(../../assets/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
-}
-@font-face {
-  font-family: Raleway-Bold;
-  src: local('Raleway-Bold'), url(../../assets/Raleway/static/Raleway-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family: Raleway-Medium;
-  src: local('Raleway-Medium'), url(../../assets/Raleway/static/Raleway-Medium.ttf) format('truetype');
-} */
-
 /* Button default styles */
 .metrc-button {
     font-family: Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 340;
     border: 0;
     border-radius: 3em;
     cursor: pointer;

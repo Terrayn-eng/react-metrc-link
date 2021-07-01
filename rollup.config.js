@@ -4,7 +4,7 @@ import copy from "rollup-plugin-copy-assets";
 import pkg from './package.json'
 import image from '@rollup/plugin-image';
 import babel from '@rollup/plugin-babel';
-import { visualizer } from 'rollup-plugin-visualizer';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
     input: 'src/index.tsx',
@@ -28,7 +28,7 @@ export default {
       typescript({ objectHashIgnoreUnknownHack: true }),
       babel({ babelHelpers: 'bundled' }),
       image(),
-      visualizer()
+      terser(),
     ],
     external: ['react', 'react-dom']
 }

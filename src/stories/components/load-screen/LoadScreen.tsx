@@ -1,6 +1,6 @@
 import React from 'react';
 import './load-screen.css';
-import closeIcon from '../../assets/close-icon.svg';
+import metrcCloseIcon from '../../assets/close-icon.svg';
 import thinkingWoman from '../../assets/thinking-woman.gif';
 
 export interface LoadScreenProps {
@@ -20,8 +20,8 @@ export const LoadScreen: React.FC<LoadScreenProps>= ({
   }) => {
     return (
         <div>
-            <div className="closeIconDiv">
-                <img className="closeIcon" src={closeIcon} onClick={closeModal}/>
+            <div className="metrcCloseIconDiv">
+                <img className="metrcCloseIcon" src={metrcCloseIcon} onClick={closeModal}/>
             </div>
             <div className="thinkingWomanDiv">
                 <img className="thinkingWoman" src={thinkingWoman}/>

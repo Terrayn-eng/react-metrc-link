@@ -46,6 +46,14 @@ export interface ModalProps {
      * States your company has vendor keys for
      */
     states: Array<string>;
+     /**
+     * Company name to use on privacy screen
+     */
+    companyName: string;
+    /**
+     * Company name to use on privacy screen
+     */
+    privacyPolicyLink:string;
 }
 
 export const Modal: React.FC<ModalProps>= ({
@@ -55,17 +63,19 @@ export const Modal: React.FC<ModalProps>= ({
     closeModal,
     handleSetScreen,
     screen,
-    states
+    states,
+    companyName,
+    privacyPolicyLink
   }) => {
-    const showHideClassName = open ? "modal display-block" : "modal display-none";
+    const showHideClassName = open ? "metrc-modal display-block" : "metrc-modal display-none";
     
     return (
         <div className={showHideClassName}>
-            <div className="modal-main">
-                {screen === "privacy" ? <PrivacyPolicyScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
+            <div className="metrc-modal-main">
+                {screen === "privacy" ? <PrivacyPolicyScreen closeModal={closeModal} handleSetScreen={handleSetScreen} companyName={companyName} privacyPolicyLink={privacyPolicyLink}/>:null}
                 {screen === "credentials" ? <CredentialsScreen closeModal={closeModal} handleSetScreen={handleSetScreen} states={states} callback={callback} backendUrl={backendUrl}/>:null}
                 {screen === "load" ? <LoadScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
-                {screen ==="success" ? <SuccessScreen closeModal={closeModal}/>:null}
+                {screen ==="success" ? <SuccessScreen closeModal={closeModal} companyName={companyName}/>:null}
                 {screen === "error" ? <ErrorScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
             </div>
         </div>

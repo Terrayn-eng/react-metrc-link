@@ -1,4 +1,4 @@
-.modal {
+.metrc-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     z-index: 200;
 }
   
-.modal-main {
+.metrc-modal-main {
     font-family: Helvetica, sans-serif;
     position:fixed;
     background: white;
@@ -29,11 +29,11 @@
     display: none;
 }
 
-.closeIcon{
+.metrcCloseIcon{
     width:12px;
 }
 
-.closeIconDiv{
+.metrcCloseIconDiv{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
