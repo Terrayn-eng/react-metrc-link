@@ -83,12 +83,19 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
             <div className="metrcLogoDiv">
                 <img className="metrcLogo" src={metrcLogo}/>
             </div>
-            <p className="user-key-label">User Key</p>
-            <input className="user-key-input" placeholder="User Key" onChange={(e)=>setUserKey(e.target.value)}/>
-            <select className="state-select" name="state" id="state" onChange={(e)=>setState(e.target.value)}>
-                {states && states.length ? states.map((state, index)=><option key={index} value={state}>{state}</option>):null}
-            </select>
-            {error ? <p className="errorMessage">Please enter a User Key.</p> : null}
+            <div className="input-div">
+                <div className="user-key-input-div">
+                    <p className="user-key-label">User Key</p>
+                    <input className="user-key-input" placeholder="User Key" onChange={(e)=>setUserKey(e.target.value)}/>
+                    {error ? <p className="errorMessage">Please enter a User Key.</p> : null}
+                </div>
+                <div className="state-input-div">
+                    <select className="state-select" name="state" id="state" onChange={(e)=>setState(e.target.value)}>
+                        {states && states.length ? states.map((state, index)=><option key={index} value={state}>{state}</option>):null}
+                    </select>
+                </div>
+            </div>
+            
             <div className="credentials-buttons-div">
                 <button className="credentials-button" onClick={handleSubmit}>Submit</button>
                 <a className="credentials-link" onClick={()=>handleSetScreen("privacy")}>Back</a>

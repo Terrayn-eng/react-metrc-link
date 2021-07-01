@@ -1,6 +1,8 @@
 .error-title-text{
     font-family: Helvetica, sans-serif;
     font-size: 20px;
+    font-weight: 600;
+    margin: 14px 0px;
     text-align: center;
 }
 
@@ -8,6 +10,7 @@
     font-size: 11px;
     text-align: center;
     padding: 5px 25px 0px 25px;
+    margin: 11px 0px;
 }
 
 .error-button {

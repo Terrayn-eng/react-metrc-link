@@ -28,7 +28,6 @@ export const LoadScreen: React.FC<LoadScreenProps>= ({
             </div>
             <div className="load-text-div">
                 <h1 className="load-title-text">Verifying your Metrc credentials...</h1>
-                <a className="load-link" onClick={()=>handleSetScreen("success")}>Back</a>
             </div>
         </div>
     )
