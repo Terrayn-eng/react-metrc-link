@@ -19,8 +19,7 @@ Then add the component to the render method with the required props
   callback={handleCallback}  
   states={states} 
   backendUrl='http://127.0.0.1:5000/user_key'
-  companyName: 'Terrayn',
-  privacyPolicyLink: 'https://www.google.com',
+  companyName: 'Terrayn'
 />
 ```
 
@@ -45,9 +44,9 @@ Then add the component to the render method with the required props
 
   * Company Name - string - The app name or company name you want the modal copy to refer to
 
-  * Privacy Policy Link - string - a link to an end user privacy policy
-
   ## Non Required Props
+
+  * Privacy Policy Link - string - a link to an end user privacy policy. Will add text to first screen that by continuing user agrees to linked privacy policy.
 
   * Label - string - Button text
 

@@ -39,7 +39,7 @@ export const PrivacyPolicyScreen: React.FC<PrivacyPolicyScreenProps>= ({
 
             <h1 className="title-text">{companyName} uses Metrc to connect with your regulatory cannibas data</h1>
             <p className="metrc-sub-text">Metrc is the government's trusted cannibas legalization partner.</p>
-            <p className="privacy-policy-text">By selecting "continue" you agree to the <a className="policy-link" href={privacyPolicyLink} target="_blank">Metrc End User Privacy Policy</a></p>
+            {privacyPolicyLink ? <p className="privacy-policy-text">By selecting "continue" you agree to the <a className="policy-link" href={privacyPolicyLink} target="_blank">Metrc End User Privacy Policy</a></p>: null}
             <div className="privacy-policy-div">
                 <button className="privacy-policy-button" onClick={()=>handleSetScreen("credentials")}>Continue</button>
             </div>

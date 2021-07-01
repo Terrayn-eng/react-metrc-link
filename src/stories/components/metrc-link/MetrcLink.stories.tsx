@@ -31,7 +31,7 @@ Primary.args = {
   states:['CO','OR','CA','AK'],
   backendUrl:'http://127.0.0.1:5000/user_key',
   companyName: 'Terrayn',
-  privacyPolicyLink: 'https://www.google.com',
+  // privacyPolicyLink: 'https://www.google.com',
   label: 'Link with Metrc',
   backgroundColor: '#68c86b',
   color: '#fff',
