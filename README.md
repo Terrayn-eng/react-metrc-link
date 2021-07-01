@@ -19,7 +19,7 @@ Then add the component to the render method with the required props
   callback={handleCallback}  
   states={states} 
   backendUrl='http://127.0.0.1:5000/user_key'
-  companyName: 'Terrayn'
+  companyName= 'Terrayn'
 />
 ```
 
