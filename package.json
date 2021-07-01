@@ -1,6 +1,6 @@
 {
   "name": "react-metrc-link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A modal that a backend url can be passed into to verify Metrc credentials",
   "main": "dist/index.js",
   "scripts": {
