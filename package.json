@@ -4,7 +4,7 @@
   "description": "A modal that a backend url can be passed into to verify Metrc credentials",
   "main": "dist/index.js",
   "scripts": {
-    "build-lib": "rollup -c",
+    "build": "rollup -c",
     "start": "rollup -c -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
