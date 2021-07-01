@@ -74,7 +74,7 @@ export const Modal: React.FC<ModalProps>= ({
             <div className="metrc-modal-main">
                 {screen === "privacy" ? <PrivacyPolicyScreen closeModal={closeModal} handleSetScreen={handleSetScreen} companyName={companyName} privacyPolicyLink={privacyPolicyLink}/>:null}
                 {screen === "credentials" ? <CredentialsScreen closeModal={closeModal} handleSetScreen={handleSetScreen} states={states} callback={callback} backendUrl={backendUrl}/>:null}
-                {screen === "load" ? <LoadScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
+                {screen === "load" ? <LoadScreen closeModal={closeModal}/>:null}
                 {screen ==="success" ? <SuccessScreen closeModal={closeModal} companyName={companyName}/>:null}
                 {screen === "error" ? <ErrorScreen closeModal={closeModal} handleSetScreen={handleSetScreen}/>:null}
             </div>

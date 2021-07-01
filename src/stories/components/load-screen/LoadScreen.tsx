@@ -4,10 +4,6 @@ import metrcCloseIcon from '../../assets/close-icon.svg';
 import thinkingWoman from '../../assets/thinking-woman.gif';
 
 export interface LoadScreenProps {
-     /**
-     * Callback to set next screen
-     */
-    handleSetScreen: (screenName: string) => void;
     /**
      * Callback to close modal
      */
@@ -15,7 +11,6 @@ export interface LoadScreenProps {
 }
 
 export const LoadScreen: React.FC<LoadScreenProps>= ({
-    handleSetScreen,
     closeModal
   }) => {
     return (
