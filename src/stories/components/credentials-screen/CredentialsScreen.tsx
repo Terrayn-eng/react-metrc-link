@@ -87,7 +87,7 @@ export const CredentialsScreen: React.FC<CredentialsScreenProps>= ({
                 <div className="user-key-input-div">
                     <p className="user-key-label">User Key</p>
                     <input className="user-key-input" placeholder="User Key" onChange={(e)=>setUserKey(e.target.value)}/>
-                    {error ? <p className="errorMessage">Please enter a User Key.</p> : null}
+                    {error ? <p className="errorMessage">Please enter a User Key.</p> : <div className="set-error-height"></div>}
                 </div>
                 <div className="state-input-div">
                     <select className="state-select" name="state" id="state" onChange={(e)=>setState(e.target.value)}>

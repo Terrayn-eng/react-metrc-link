@@ -115,3 +115,17 @@ function App() {
 export default App;
 ```
 
+## Response
+
+If request is successful response will be a 200 with a body of 
+
+```
+ {
+    user_key:'...',
+    state:'CO'
+  }
+```
+where user_key and state are the values the user entered.
+
+Otherwise the response will be a 500 and the modal will send the user to re-enter their credentials.
+
