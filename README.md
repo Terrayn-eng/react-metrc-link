@@ -96,17 +96,17 @@ function App() {
         companyName='Terrayn'
         privacyPolicyLink='https://www.google.com'
         label='Link with Metrc'
-        backgroundColor='#68c86b',
-        color='#fff',
-        fontFamily='Helvetica, sans-serif',
-        fontWeight=40,
-        border='none',
-        borderRadius='3em',
-        lineHeight=1,
-        letterSpacing='0.5px',
-        fontSize='16px',
-        padding='12px 74px',
-        margin='0px',
+        backgroundColor='#68c86b'
+        color='#fff'
+        fontFamily='Helvetica, sans-serif'
+        fontWeight='40'
+        border='none'
+        borderRadius='3em'
+        lineHeight='1'
+        letterSpacing='0.5px'
+        fontSize='16px'
+        padding='12px 74px'
+        margin='0px'
       />
     </div>
   );
