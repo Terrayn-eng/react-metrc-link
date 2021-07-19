@@ -2,7 +2,10 @@
 
 A React button and modal designed to take in Metrc User Key and State and output those credentials if they are accurate.
 
-Pairs with a python package (metrc-python) for the backend.
+Pairs with a python package [metrc-client-python](https://pypi.org/project/metrc-client-python/) for the backend.
+
+
+![](https://media.giphy.com/media/1Z12CZEvvxqFAa5dli/giphy.gif)
 
 ## Getting Started
 
@@ -128,4 +131,12 @@ If request is successful response will be a 200 with a body of
 where user_key and state are the values the user entered.
 
 Otherwise the response will be a 500 and the modal will send the user to re-enter their credentials.
+
+## Attributions
+
+Package created by partnership between [Terrayn](https://terrayn.com) and [Lendica](https://golendica.com)
+
+Designs by [Anna Stapor](https://www.linkedin.com/in/anna-stapor-65b462172/)
+
+Illustrations by [Undraw](https://undraw.co/)
 
