@@ -84,6 +84,10 @@ export interface MetrcLinkProps {
      * Company name to use on privacy screen
      */
     privacyPolicyLink:string;
+    /**
+     * Called when modal is closed
+     */
+     onExit?: () => void;
 }
 
 export const MetrcLink: React.FC<MetrcLinkProps>= ({
@@ -103,7 +107,8 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
     padding,
     margin,
     companyName,
-    privacyPolicyLink
+    privacyPolicyLink,
+    onExit
   }) => {
     const [open, setOpen]=useState(false)
     const [screen, setScreen]=useState("privacy")
@@ -115,6 +120,7 @@ export const MetrcLink: React.FC<MetrcLinkProps>= ({
     const closeModal =() =>{
         setOpen(false)
         handleSetScreen('privacy')
+        onExit?.()
     }
 
     const handleSetScreen = (screenName:string) =>{
